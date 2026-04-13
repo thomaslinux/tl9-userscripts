@@ -29,8 +29,20 @@ window.addEventListener('keydown', e => {
   }
   if (e.key === 'z') {
     e.preventDefault();
-    HTML_undo?.dispatchEvent(
-      new MouseEvent('mousedown')
+      HTML_undo?.dispatchEvent(
+        new MouseEvent('mousedown')
+      )
+  }
+  document.querySelector('.game-over_btn.without-ads').title = 'e pour seconde chance';
+  if (e.key === 'e') {
+    document.querySelector('.game-over_btn.without-ads')?.dispatchEvent(
+        new MouseEvent('click')
+      )
+  }
+  document.querySelector('.new-game-button-wrapper').title = 'r pour nouvelle partie';
+  if (e.key === 'r') {
+    document.querySelector('.new-game-button-wrapper button')?.dispatchEvent(
+      new MouseEvent('click')
     )
   }
 });
